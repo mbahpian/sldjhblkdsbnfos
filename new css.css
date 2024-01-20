@@ -5,13 +5,10 @@
 }
 
 :root {
-  --purple: hsl(240, 80%, 89%);
+  --purple: hsl(329.45deg 100% 73.05%);
   --pink: hsl(0, 59%, 94%);
-  --light-bg: hsl(204, 37%, 92%);
+  --light-bg: hsl(0deg 0% 93.7%);
   --light-gray-bg: hsl(0, 0%, 94%);
-  --white: hsl(0, 0%, 100%);
-  --dark: hsl(0, 0%, 7%);
-  --text-gray: hsl(0, 0%, 30%);
 }
 
 body {
@@ -37,7 +34,6 @@ p {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
 }
 
