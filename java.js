@@ -1,10 +1,9 @@
+let preveiwContainer = document.querySelector('.products-preview');
+let previewBox = preveiwContainer.querySelectorAll('.preview');
 
-let preveiwMenue = document.querySelector('.menu-preview');
-let previewBox = preveiwMenue.querySelectorAll('.preview');
-
-document.querySelectorAll('.menu-container .menu').forEach(product =>{
+document.querySelectorAll('.products-container .product').forEach(product =>{
   product.onclick = () =>{
-    preveiwMenue.style.display = 'flex';
+    preveiwContainer.style.display = 'flex';
     let name = product.getAttribute('data-name');
     previewBox.forEach(preview =>{
       let target = preview.getAttribute('data-target');
@@ -16,8 +15,8 @@ document.querySelectorAll('.menu-container .menu').forEach(product =>{
 });
 
 previewBox.forEach(close =>{
-  close.querySelector('.fa-xmark').onclick = () =>{
+  close.querySelector('.fa-times').onclick = () =>{
     close.classList.remove('active');
-    preveiwMenue.style.display = 'none';
+    preveiwContainer.style.display = 'none';
   };
 });
