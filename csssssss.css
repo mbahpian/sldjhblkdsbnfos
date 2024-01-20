@@ -1,92 +1,142 @@
-.lookbook-gallery {
-  .a11y-only {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-  .a11y-only.focusable:active,
-  .a11y-only.focusable:focus {
-  clip: auto;
-  height: auto;
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Merriweather');
+
+$body: 'Inconsolata', monospace;
+$big: 'Merriweather', serif;
+
+$white: #ffffff;
+$primary: #F2DAD7;
+$secondary: #D1A39E;
+$light: #CECDCA;
+$dark: #474545;
+
+$ease: all 0.3s ease-in-out;
+
+body {
+  font-family: $body;
   margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
 }
-  img {
-  min-width: 10em;
-  max-width: 100%;
-  display: block;
-  background: #ddd;
+
+button {
+  cursor: pointer;
 }
-  .model {
-  margin: 0;
+
+#portfolio {
+  width: 100%;
+  min-height: 100vh;
+  background: $white;
   position: relative;
-  
-  .model--caption {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2px;
+}
+.project {
+  position: relative;
+  background: $primary;
+  overflow: hidden;
+  img {
     position: absolute;
+    opacity: 0.9;
+  }
+  p {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 1em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 3;
+  }
+  .grid__title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
     bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    background-color: rgba(0,0,0,.85);
-    padding: .35em 1.2em .25em .9em;
-    justify-self: start;
-    
-    .model-hed {
-      font-size: 1.25em;
-      margin: .5em 0;
-      font-family: Lora, serif;
-      
-      a {
-        color: #fff;
-        text-decoration-color: rgba(255,255,255,.5);
-      }
-    }
-    p {
-      font-size: .9375em;
-      font-family: "Open Sans",sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      color: #fff;
-      line-height: 1.5;
-      margin: 0 0 .5em 0;
+    font-weight: 100;
+    font-size: 0.8em;
+    z-index: 3;
+    text-transform: uppercase;
+    color: $dark;
+    letter-spacing: 2px;
+  }
+}
+
+// project hover overlay
+.project:hover .grid__overlay {
+  transform: translateY(0%);
+}
+
+.grid__overlay {
+  background: rgba(darken($primary, 10%), .9);
+  height: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transform: translateY(101%);
+  transition: $ease;
+  button {
+    background: none;
+    outline: none;
+    font-weight: 100;
+    letter-spacing: 2px;
+    border: 1px solid $white;
+    color: $white;
+    text-transform: uppercase;
+    padding: 10px;
+    &:hover {
+      transition: $ease;
+      background: $white;
+      color: $secondary;
+      transform: scale(1.05);
     }
   }
 }
-  @media( min-width: 45em ) {
-  .lookbook-grid {
-    display: flex;
-    flex-wrap: wrap;
+
+//project popup overlay
+
+.overlay {
+  position: fixed;
+  background: rgba($dark, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 3;
+}
+.overlay.open {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.overlay__inner {
+  background: $white;
+  width: 700px;
+  padding: 20px;
+  position: relative;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  background: none;
+  outline: 0;
+  color: $dark;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  &:hover {
+    color: $secondary;
   }
-  .model {
-    flex: 47.5%;
-    margin: .5%;
-  }
-  }
-  @media( min-width: 65em ) {
-  .model {
-    flex: 24.25% 0;
-    margin: .25%;
-  }
-  @supports( display: grid ) {
-    .lookbook-grid {
-      display: grid;
-      grid-gap: .5em;
-      grid-template-columns: repeat( 4, minmax( 200px, 1fr ) );
-    }
-    .model {
-      margin: 0;
-    }
-    .model:nth-of-type(4n-1) {
-      grid-row-end: span 2;
-      grid-column-end: span 2;
-    }
-  }
-  }
+}
+
+.project__image {
+  margin-left: -50%;
 }
