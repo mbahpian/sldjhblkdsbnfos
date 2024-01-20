@@ -32,8 +32,6 @@ body{
     background: #fff;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    outline: 0.1rem solid #ccc;
-    outline-offset: -0.7rem;
 }
 .container .menu-container .menu:hover{
     outline-offset: 0;
