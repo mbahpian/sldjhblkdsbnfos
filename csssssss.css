@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Square+Peg&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     text-transform: capitalize;
-    font-family: 'Ms Madi', cursive;
-    font-family: 'Square Peg', cursive;
     transition: all 0.2s linear;
 }
 body{
