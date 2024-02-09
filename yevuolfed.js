@@ -2,21 +2,6 @@
 
     Peringatan !
 
-===================================================================================================
-
-    Mengubah / Menghapus file javascript (js) ini dapat mengakibatkan :
-
-    1. Kerusakan / error pada template
-    2. Menghilangkan fungsi update / perbaikan otomatis pada template
-    3. Tidak akan mendapatkan support / bantuan dari kreator template
-
-    Terima kasih sudah menggunakan karya saya. :)
-
-    Salam,
-    KangRian.NET
-
-    Terakhir Diperbarui : 1/6/2022 @ 14:41
-
 ================================================================================================ */
 
 var _0x173287 = _0x4917;
@@ -114,7 +99,6 @@ function license() {
                                 }
                                 _0x59a12f(_0x1c7063(0x2be) + _0x5ea708($license_item[_0x1c7063(0x2b8)]('-', '\x20')) + _0x1c7063(0x262));
                             } else
-                                console['log']('Developed\x20by.\x20https://kangrian.net\x20(\x20Premium\x20Version\x20)');
                         }
                     }
                 }
