@@ -2,6 +2,21 @@
 
     Peringatan !
 
+===================================================================================================
+
+    Mengubah / Menghapus file javascript (js) ini dapat mengakibatkan :
+
+    1. Kerusakan / error pada template
+    2. Menghilangkan fungsi update / perbaikan otomatis pada template
+    3. Tidak akan mendapatkan support / bantuan dari kreator template
+
+    Terima kasih sudah menggunakan karya saya. :)
+
+    Salam,
+    KangRian.NET
+
+    Terakhir Diperbarui : 1/6/2022 @ 14:41
+
 ================================================================================================ */
 
 var _0x173287 = _0x4917;
@@ -99,6 +114,7 @@ function license() {
                                 }
                                 _0x59a12f(_0x1c7063(0x2be) + _0x5ea708($license_item[_0x1c7063(0x2b8)]('-', '\x20')) + _0x1c7063(0x262));
                             } else
+                                console['log']('Developed\x20by.\x20https://kangrian.net\x20(\x20Premium\x20Version\x20)');
                         }
                     }
                 }
@@ -125,8 +141,8 @@ window[_0x173287(0x205)] = function() {
 function cart() {
     var _0x2a474e = _0x173287
       , _0x98b432 = _0x2a474e(0x231) + $_config[_0x2a474e(0x2c6)][_0x2a474e(0x2c7)] + _0x2a474e(0x146) + $_config[_0x2a474e(0x2c6)]['checkout_phone'] + _0x2a474e(0x280);
-	$_config[_0x2a474e(0x29b)][_0x2a474e(0x109)] && (_0x98b432 += '\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22email\x22\x20name=\x22email\x22\x20placeholder=\x22' + $_config[_0x2a474e(0x2c6)][_0x2a474e(0x17f)] + _0x2a474e(0x1bf));
-	$_config[_0x2a474e(0x29b)]['address'] && (_0x98b432 += _0x2a474e(0x1b4) + $_config[_0x2a474e(0x2c6)]['checkout_address'] + _0x2a474e(0x28c));
+    $_config[_0x2a474e(0x29b)][_0x2a474e(0x109)] && (_0x98b432 += '\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20name=\x22email\x22\x20placeholder=\x22' + $_config[_0x2a474e(0x2c6)][_0x2a474e(0x17f)] + _0x2a474e(0x1bf));
+    $_config[_0x2a474e(0x29b)]['address'] && (_0x98b432 += _0x2a474e(0x1b4) + $_config[_0x2a474e(0x2c6)]['checkout_address'] + _0x2a474e(0x28c));
     $_config[_0x2a474e(0x29b)][_0x2a474e(0x15a)] && (_0x98b432 += _0x2a474e(0x1a8) + $_config[_0x2a474e(0x2c6)][_0x2a474e(0x2c9)] + _0x2a474e(0x19f));
     if ($_config['checkout_form'][_0x2a474e(0x253)]) {
         _0x98b432 += _0x2a474e(0x2b0) + $_config[_0x2a474e(0x2c6)][_0x2a474e(0x19d)] + _0x2a474e(0x2ae) + $_config['text'][_0x2a474e(0x19d)] + '\x20:\x22>\x20\x20\x20\x20\x20\x20\x20\x20';
